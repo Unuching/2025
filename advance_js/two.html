@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculation</title>
+  </head>
+  <body>
+    <h1>The result is:</h1>
+    <p id="unu"></p>
+
+    <script>
+      function final_result(result) {
+        document.getElementById("unu").innerHTML = result;
+      }
+
+      function calculation(n1, n2) {
+        sum = n1 + n2;
+        return sum;
+      }
+      new_num = calculation(3, 8);
+      final_result(new_num);
+    </script>
+  </body>
+</html>

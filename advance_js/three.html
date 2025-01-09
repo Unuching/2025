@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Another Calculator</title>
+  </head>
+  <body>
+    <h1>The number is:</h1>
+    <p id="unu"></p>
+
+    <script>
+      function show(numbers_n) {
+        document.getElementById("unu").innerHTML = numbers_n;
+      }
+
+      function new_Calc(n1, n2, call_n) {
+        let multiply = n1 * n2;
+        call_n(multiply);
+      }
+      new_Calc(4, 7,show);
+    </script>
+  </body>
+</html>
