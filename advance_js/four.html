@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Neg Numbers</title>
+  </head>
+  <body>
+    <h1>The positive numbers are:</h1>
+    <p id="unu"></p>
+
+    <script>
+      let my_array = [4, 6, -8, 34, -55, 99, -543, 67, -88, -345, 3423];
+
+      function remove_neg(numbers, callback) {
+        const new_array = [];
+        for (const x of numbers) {
+          if (callback(x)) {
+            new_array.push(x);
+          }
+        }
+        return new_array;
+      }
+      let positive_numbers = remove_neg(my_array, (x) => x >= 0);
+
+      document.getElementById("unu").innerHTML = positive_numbers;
+    </script>
+  </body>
+</html>
