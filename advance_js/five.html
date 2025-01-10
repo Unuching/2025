@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Promise</title>
+  </head>
+  <body>
+    <h1>The result is:</h1>
+    <p id="unu"></p>
+
+    <script>
+      function show(thing) {
+        document.getElementById("unu").innerHTML = thing;
+      }
+
+      let my_Promise = new Promise(function (my_Resolve, my_Reject) {
+        let x = 8;
+        if (x == 0) {
+          my_Resolve("True");
+        } else {
+          my_Reject("False");
+        }
+      });
+
+      my_Promise.then(
+        function (value) {
+          show(value);
+        },
+        function (err) {
+          show(err);
+        }
+      );
+    </script>
+  </body>
+</html>

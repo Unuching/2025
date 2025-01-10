@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Out</title>
+  </head>
+  <body>
+    <h1>Set time out:</h1>
+    <p id="unu"></p>
+
+    <script>
+      function love(hey) {
+        document.getElementById("unu").innerHTML = hey;
+      }
+      setTimeout(function () {
+        love("I Love You");
+      }, 2000);
+    </script>
+  </body>
+</html>
