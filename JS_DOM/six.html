@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM six</title>
+  </head>
+  <body>
+    <h1>Finding html elements using document forms</h1>
+
+    <form action="#" id="form2">
+      Husband Name:
+      <input type="text" name="husbandName" value="Unuching Marma" /><br />
+      Spose:
+      <input type="text" name="wife" value="Mrachingnu Marma " /> <br />Child:
+      <input type="text" name="child" value="Chengchengnu Marma" /> <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <h2>These are the values of form</h2>
+    <p id="unu"></p>
+
+    <script>
+      const myFamily = document.forms["form2"];
+
+      let text = "";
+      for (let i = 0; i < myFamily.length; i++) {
+        text += myFamily.elements[i].value + "</br>";
+      }
+      document.getElementById("unu").innerHTML = text;
+    </script>
+  </body>
+</html>
