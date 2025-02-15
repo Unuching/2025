@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM four</title>
+  </head>
+  <body>
+    <div id="div1">
+      <p>Hello</p>
+      <p>World</p>
+      <p id="unu">How are toy</p>
+    </div>
+    <div id="div2">
+      <p>Unu</p>
+      <p id="mema">mema</p>
+      <p>How are u</p>
+    </div>
+
+    <script>
+      const x = document.getElementById("div1");
+      const y = x.getElementsByTagName("p");
+
+      document.getElementById("unu").innerHTML = y[0].innerHTML;
+      const a = document.getElementById("div2");
+      const b = a.getElementsByTagName("p");
+      document.getElementById("mema").innerHTML = b[2].innerHTML;
+    </script>
+  </body>
+</html>
